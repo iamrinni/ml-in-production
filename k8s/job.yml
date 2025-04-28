@@ -1,0 +1,24 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: best-server-job
+  labels:
+    app: best-server
+spec:
+  template:
+    metadata:
+      labels:
+        app: best-server
+    spec:
+      containers:
+        - name: best-server
+          image: irinaevdokimova11/myapp:latest
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits:
+              cpu: "200m"
+              memory: "256Mi"
+      restartPolicy: Never
+  backoffLimit: 1

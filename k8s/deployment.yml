@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: best-server-deployment
+  labels:
+    app: best-server
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: best-server
+  template:
+    metadata:
+      labels:
+        app: best-server
+    spec:
+      containers:
+        - name: best-server
+          image: irinaevdokimova11/myapp:latest
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits:
+              cpu: "200m"
+              memory: "256Mi"
