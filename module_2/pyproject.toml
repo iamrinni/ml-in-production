@@ -1,0 +1,28 @@
+[project]
+name = "module_2"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Iryna Y"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "minio",
+    "argilla>=2.8.0",
+    "datasets>=3.5.0",
+    "duckdb>=1.2.2",
+    "ipython>=9.1.0",
+    "lancedb>=0.21.2",
+    "mcp[cli]>=1.6.0",
+    "modal>=0.73.166",
+    "openai>=1.72.0",
+    "retry>=0.9.2",
+    "ruff>=0.11.5",
+    "typer>=0.15.2",
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
